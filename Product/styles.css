@@ -1,0 +1,137 @@
+:root {
+  --primary-color-cyan: hsl(158, 36%, 37%);
+  --primary-color-cream: hsl(30, 38%, 92%);
+  --neutral-color-dark-blue: hsl(212, 21%, 14%);
+  --neutral-color-graysh-blue: hsl(228, 12%, 48%);
+  --neutral-color-white: hsl(0, 0%, 100%);
+}
+
+/*styling--fonts--backgrounds--margins*/
+
+body {
+  background-color: var(--primary-color-cream);
+  font-family: "Montserrat", sans-serif;
+  padding: 7px;
+}
+
+.product-card {
+  background-color: var(--neutral-color-white);
+  padding-bottom: 20px;
+}
+
+span {
+  color: var(--neutral-color-graysh-blue);
+  font-size: 14px;
+  letter-spacing: 4px;
+  margin-left: 20px;
+}
+
+h1 {
+  color: var(--neutral-color-dark-blue);
+  font-family: "Fraunces", serif;
+  font-size: 35px;
+  margin-left: 20px;
+  margin-right: 30px;
+  margin-top: 5px;
+}
+
+p {
+  color: var(--neutral-color-graysh-blue);
+  font-size: 14px;
+  margin-left: 20px;
+  margin-right: 30px;
+}
+
+h2 {
+  color: var(--primary-color-cyan);
+  font-size: 33px;
+  font-family: "Fraunces", serif;
+  margin-left: 20px;
+}
+
+.product-price p {
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.add-button {
+  background-color: var(--primary-color-cyan);
+  font-size: 14px;
+  color: var(--neutral-color-white);
+}
+
+.attribution {
+  font-size: 12px;
+  text-align: center;
+}
+
+/*--------Construction--of--Card*--------*/
+
+.add-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  margin-left: 20px;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+}
+
+.attribution {
+  margin-top: 30px;
+}
+
+.product-card {
+  border-radius: 2%;
+}
+
+.perfum-image img {
+  border-top-left-radius: 2%;
+  border-top-right-radius: 2%;
+}
+
+@media screen and (min-width: 376px) {
+  body {
+    width: 1440px;
+    align-content: center;
+    padding: 3%;
+  }
+
+  .product-container {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+
+  .product-card {
+    width: 690px;
+    height: 490px;
+    display: flex;
+    padding-bottom: 0px;
+  }
+
+  .product-information {
+    margin-top: 40px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .perfum-image {
+    display: flex;
+  }
+  .perfum-image img {
+    border-bottom-left-radius: 2%;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 0;
+  }
+
+  .add-button {
+    align-items: center;
+    display: flex;
+  }
+}
