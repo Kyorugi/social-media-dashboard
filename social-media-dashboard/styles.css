@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: #404040;
+  --bg-color: #fff;
+  --card-bg-color: hsl(227, 47%, 96%);
+  --card-bg-color-active: hsl(226, 37%, 88%);
+}
+
+:root .dark-theme {
+  --text-color: #fff;
+  --bg-color: linear-gradient(180deg, #191926 30%, #10101a 0);
+  --card-bg-color: hsl(228, 28%, 20%);
+  --card-bg-color-active: hsl(227, 29%, 32%);
+}
+
+body {
+  margin: 0;
+  line-height: 1.6;
+  color: var(--text-color);
+  min-height: 100vh;
+  background: var(--bg-color);
+  background-repeat: no-repeat;
+  font-size: 0.875rem;
+  font-family: "Inter", sans-serif;
+}
