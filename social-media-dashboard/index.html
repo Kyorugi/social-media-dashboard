@@ -3,18 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
-
     <title>Frontend Mentor | Social media dashboard</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
         font-size: 11px;
@@ -26,17 +26,73 @@
     </style>
   </head>
   <body>
-    Social Media Dashboard Total Followers: 23,004 Dark Mode @nathanf 1987
-    Followers 12 Today @nathanf 1044 Followers 99 Today @realnathanf 11k
-    Followers 1099 Today Nathan F. 8239 Subscribers 144 Today Overview - Today
-    Page Views 87 3% Likes 52 2% Likes 5462 2257% Profile Views 52k 1375%
-    Retweets 117 303% Likes 507 553% Likes 107 19% Total Views 1407 12%
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+    <div class="Dashboard-container">
+      <div class="Header-container">
+        <div class="Header">
+          <h2>Social Media Dashboard</h2>
+          <p>Total Followers: 23,004</p>
+        </div>
+        <div class="switch-toggle">
+          <span>Dark Mode</span>
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+      <div class="top-cards-container">
+        <div class="fb-card">
+          <img src="/images/icon-facebook.svg" /> &nbsp; @nathanf
+          <h1>1987</h1>
+          <p>Followers</p>
+          <img src="/images/icon-up.svg" /> &nbsp; 12 Today
+        </div>
+        <div class="tt-card">
+          <img src="/images/icon-twitter.svg" /> &nbsp; @nathanf
+          <h1>1044</h1>
+          <p>Followers</p>
+          <img src="/images/icon-up.svg" /> &nbsp; 99 Today
+        </div>
+        <div class="ig-card">
+          <img src="/images/icon-instagram.svg" /> &nbsp; @realnathanf
+          <h1>11k</h1>
+          <p>Followers</p>
+          <img src="/images/icon-up.svg" /> &nbsp; 1099 Today
+        </div>
+        <div class="yt-card">
+          <img src="/images/icon-youtube.svg" /> &nbsp; Nathan F.
+          <h1>8239</h1>
+          <p>Subscribers</p>
+          <img src="/images/icon-down.svg" /> &nbsp; 144 Today
+        </div>
+      </div>
+      <div class="Overview">Overview - Today</div>
+      <div class="bottom-cards-container">
+        <div class="fb-views-card">
+          <span>
+            Page Views<span><img src="/images/icon-facebook.svg" /></span>
+          </span>
+          <span>
+            87<span><img src="/images/icon-up.svg" />3%</span>
+          </span>
+        </div>
+        <div class="fb-likes-card">Likes 52 2%</div>
+        <div class="ig-likes-card">Likes 5462 2257%</div>
+        <div class="ig-views-card">ProfileViews 52k 1375%</div>
+        <div class="tt-retweets-card">Retweets 117 303%</div>
+        <div class="tt-likes-card">Likes 507 553%</div>
+        <div class="yt-likes-card">Likes 107 19%</div>
+        <div class="yt-totalviews-card">Total Views 1407 12%</div>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/Kyorugi?tab=repositories" target="_blank"
+          >Kyorugi</a
+        >.
+      </div>
     </div>
     <script src="./script.js"></script>
   </body>

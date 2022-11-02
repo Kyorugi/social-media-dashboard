@@ -27,4 +27,77 @@ body {
   background-repeat: no-repeat;
   font-size: 0.875rem;
   font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.Dashboard-container {
+  margin: 0px;
+  max-width: 1120px;
+}
+
+.Header-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 15px;
+}
+
+.Header {
+}
+
+.top-cards-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.fb-card,
+.tt-card,
+.ig-card,
+.yt-card {
+  background-color: var(--card-bg-color);
+  margin: 15px;
+  width: 250px;
+  height: 215px;
+  border-radius: 7px;
+}
+
+.Overview {
+  margin: 15px;
+}
+.bottom-cards-container {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.fb-views-card,
+.fb-likes-card,
+.ig-likes-card,
+.ig-views-card,
+.tt-retweets-card,
+.tt-likes-card,
+.yt-likes-card,
+.yt-totalviews-card {
+  background-color: var(--card-bg-color);
+  margin: 15px;
+  width: 250px;
+  height: 110px;
+  border-radius: 7px;
+}
+
+.fb-views-card {
+  display: flex;
+  flex-direction: column;
+
+  justify-items: stretch;
+  justify-self: stretch;
 }
