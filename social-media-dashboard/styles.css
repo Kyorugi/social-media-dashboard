@@ -6,9 +6,10 @@
 
 :root {
   --text-color: #404040;
-  --bg-color: #fff;
+  --bg-color: linear-gradient(180deg, #f2f2f8 30%, #f8f8f8 0);
   --card-bg-color: hsl(227, 47%, 96%);
   --card-bg-color-active: hsl(226, 37%, 88%);
+  --header-bg-color: hsl(225, 100%, 98%);
 }
 
 :root .dark-theme {
@@ -22,8 +23,7 @@ body {
   margin: 0;
   color: var(--text-color);
   min-height: 100vh;
-  background: white /*hsl(225, 100%, 98%)*/;
-  background-size: 10px;
+  background: var(--bg-color);
   background-repeat: no-repeat;
   font-size: 0.875rem;
   font-family: "Inter", sans-serif;
@@ -31,6 +31,18 @@ body {
   justify-content: center;
 }
 
+/*.background {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 39%;
+  background-color: var(--header-bg-color);
+  z-index: 1;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+*/
 /*-------------HEADER--------------*/
 
 .Header-container {
@@ -97,7 +109,7 @@ p {
   left: 3px;
   right: 0;
   bottom: 3px;
-  background-color: white;
+  background: var(--bg-color);
   transition: 0.3s;
   border-radius: 50px;
 }
@@ -118,7 +130,9 @@ input:checked + .slider:before {
 
 .Dashboard-container {
   margin: 0px;
-  max-width: 1120px;
+  position: relative;
+  z-index: 2;
+  width: 1120px;
 }
 
 /*-------Top--Cards--Container-------*/
@@ -137,7 +151,8 @@ input:checked + .slider:before {
 .yt-card {
   background-color: var(--card-bg-color);
   margin: 15px;
-  width: 250px;
+  max-width: 250px;
+  min-width: 250px;
   height: 215px;
   border-radius: 5px;
   display: flex;
@@ -148,6 +163,7 @@ input:checked + .slider:before {
   border-top-width: 5px;
   font-size: 14px;
   padding-top: 20px;
+  flex: 1;
 }
 
 h1 {
@@ -197,7 +213,7 @@ h2 {
 .Overview {
   font-size: 22px;
   font-weight: 700;
-  color: hsl(228, 12%, 44%);
+  color: var(--text-color);
   margin-bottom: 5px;
   margin: 15px;
   display: flex;
@@ -224,7 +240,8 @@ h2 {
 .yt-totalviews-card {
   background-color: var(--card-bg-color);
   margin: 15px;
-  width: 250px;
+  min-width: 250px;
+  max-width: 250px;
   height: 125px;
   border-radius: 7px;
   display: flex;
@@ -233,6 +250,7 @@ h2 {
   padding-top: 10px;
   padding-left: 30px;
   padding-right: 30px;
+  flex: 1;
 }
 
 .bottom-cards-icons {
@@ -289,7 +307,7 @@ hr {
 .tt-likes-card:hover,
 .yt-likes-card:hover,
 .yt-totalviews-card:hover {
-  background-color: #e1e3f0;
+  background-color: var(--card-bg-color-active);
   cursor: pointer;
 }
 
@@ -312,8 +330,6 @@ hr {
 @media screen and (max-width: 560px) {
   .Header-container {
     flex-direction: column;
-    margin-left: 20px;
-    margin-right: 15px;
     align-content: center;
   }
 
@@ -329,7 +345,7 @@ hr {
   .tt-likes-card,
   .yt-likes-card,
   .yt-totalviews-card {
-    width: 325px;
+    min-width: 325px;
   }
 
   .switch-toggle {
